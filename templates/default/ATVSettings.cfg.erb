@@ -1,0 +1,74 @@
+[DEFAULT]
+showsynopsis = Hide
+movies_navbar_decades = checked
+showplayerclock = True
+tv_navbar_unwatched = checked
+movies_navbar_directors = checked
+subtitlesize = 75
+transcoderaction = Auto
+homevideos_navbar_byfolder = checked
+tv_navbar_genres = checked
+durationformat = Hours/Minutes
+homevideoview = Grid
+homevideos_navbar_genres = checked
+clockposition = Center
+showtitles_homevideos = Highlighted Only
+movies_navbar_more = checked
+tv_navbar_more = checked
+subtitlerenderer = Auto
+homevideos_navbar_unwatched = checked
+movies_navbar_actors = checked
+showview = List
+movieview = Grid
+movies_navbar_unwatched = checked
+movies_navbar_byfolder = checked
+showtitles_tvshows = Highlighted Only
+showendtime = True
+channelview = List
+flattenseason = False
+transcodequality = 1080p 40.0Mbps
+showtitles_channels = Highlighted Only
+showtitles_movies = Highlighted Only
+seasonview = List
+myplex_auth =
+showunwatched = True
+movies_navbar_collections = checked
+phototranscoderaction = Auto
+myplex_user =
+remotebitrate = 1080p 40.0Mbps
+homevideos_navbar_collections = checked
+libraryview = List
+overscanadjust = 0
+audioboost = 100
+timeformat = 24 Hour
+actorview = Movies
+movies_navbar_genres = checked
+forcedirectplay = False
+pms_uuid = *
+forcetranscode = False
+listviewmetadata = Show
+language = en_US
+
+[007]
+pms_uuid = PMS_from_Settings
+myplex_user = <%= @myplex_user %>
+myplex_auth = <%= @myplex_auth %>
+transcoderaction = Auto
+remotebitrate = 1080p 40.0Mbps
+
+[<%= @apple_tv_id %>]
+actorview = Movies
+durationformat = Hours/Minutes
+listviewmetadata = Show
+movies_navbar_actors = unchecked
+movies_navbar_decades = unchecked
+movies_navbar_directors = unchecked
+movies_navbar_genres = unchecked
+movieview = Grid
+pms_uuid = PMS_from_Settings
+seasonview = List
+showview = Grid
+tv_navbar_genres = unchecked
+myplex_user = <%= @myplex_user %>
+myplex_auth = <%= @myplex_auth %>
+
