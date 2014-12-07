@@ -15,9 +15,12 @@ default[:plexconnect][:settings][:port_pms] = 32400
 default[:plexconnect][:settings][:port_ssl] = 443
 default[:plexconnect][:settings][:port_webserver] = 80
 
+default[:plexconnect][:atv_settings][:apple_tv_id] = 'id'
 default[:plexconnect][:atv_settings][:myplex_user] = 'user'
 default[:plexconnect][:atv_settings][:myplex_auth] = 'auth'
-default[:plexconnect][:atv_settings][:apple_tv_id] = 'id'
+default[:plexconnect][:atv_settings][:subtitlesize] = 100
+default[:plexconnect][:atv_settings][:subtitlerenderer] = 'Auto'
+default[:plexconnect][:atv_settings][:transcodequality] = '1080p 40.0Mbps'
 
 default[:plexconnect][:certificate] = ''
 default[:plexconnect][:key] = ''

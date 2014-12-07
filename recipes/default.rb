@@ -57,7 +57,10 @@ template ::File.join(node[:plexconnect][:install_dir], 'ATVSettings.cfg') do
   variables(
     myplex_user: node[:plexconnect][:atv_settings][:myplex_user],
     myplex_auth: node[:plexconnect][:atv_settings][:myplex_auth],
-    apple_tv_id: node[:plexconnect][:atv_settings][:apple_tv_id]
+    apple_tv_id: node[:plexconnect][:atv_settings][:apple_tv_id],
+    subtitlesize: node[:plexconnect][:atv_settings][:subtitlesize],
+    subtitlerenderer: node[:plexconnect][:atv_settings][:subtitlerenderer],
+    transcodequality: node[:plexconnect][:atv_settings][:transcodequality]
   )
   owner 'plexconnect'
   group 'plexconnect'
