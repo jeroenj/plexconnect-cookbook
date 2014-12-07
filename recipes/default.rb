@@ -55,9 +55,9 @@ end
 template ::File.join(node[:plexconnect][:install_dir], 'ATVSettings.cfg') do
   source 'ATVSettings.cfg.erb'
   variables(
-    myplex_user: node[:plexconnect][:settings][:myplex_user],
-    myplex_auth: node[:plexconnect][:settings][:myplex_auth],
-    apple_tv_id: node[:plexconnect][:settings][:apple_tv_id]
+    myplex_user: node[:plexconnect][:atv_settings][:myplex_user],
+    myplex_auth: node[:plexconnect][:atv_settings][:myplex_auth],
+    apple_tv_id: node[:plexconnect][:atv_settings][:apple_tv_id]
   )
   owner 'plexconnect'
   group 'plexconnect'
