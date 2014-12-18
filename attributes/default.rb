@@ -4,7 +4,7 @@ default[:plexconnect][:install_dir] = '/srv/apps/plexconnect'
 default[:plexconnect][:log_dir] = '/var/log/plexconnect'
 
 default[:plexconnect][:git_url] = 'https://github.com/iBaa/PlexConnect.git'
-default[:plexconnect][:git_ref] = 'v0.4'
+default[:plexconnect][:git_ref] = 'v0.5'
 
 default[:plexconnect][:settings][:certfile] = ''
 default[:plexconnect][:settings][:ip_pms] = '127.0.0.1'
