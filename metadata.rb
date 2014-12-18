@@ -5,4 +5,6 @@ license           'MIT'
 description       'Installs PlexConnect.'
 version           '2.0.0'
 
+depends           'python'
+
 supports          'ubuntu'
