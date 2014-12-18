@@ -15,7 +15,6 @@ git node[:plexconnect][:install_dir] do
   action :checkout
   user 'plexconnect'
   group 'plexconnect'
-  # notifies :restart, 'service[plexconnect]'
 end
 
 directory node[:plexconnect][:log_dir] do
