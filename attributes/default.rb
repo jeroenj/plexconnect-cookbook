@@ -1,5 +1,7 @@
 # proxy pass plexconnect
 
+default[:plexconnect][:user] = 'plexconnect'
+default[:plexconnect][:group] = 'plexconnect'
 default[:plexconnect][:install_dir] = '/srv/apps/plexconnect'
 default[:plexconnect][:log_dir] = '/var/log/plexconnect'
 

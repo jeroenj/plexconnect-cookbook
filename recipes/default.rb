@@ -1,38 +1,38 @@
-user 'plexconnect' do
+user node[:plexconnect][:user] do
   system true
   shell '/bin/false'
 end
 
 directory node[:plexconnect][:install_dir] do
   recursive true
-  owner 'plexconnect'
-  group 'plexconnect'
+  owner node[:plexconnect][:user]
+  group node[:plexconnect][:group]
 end
 
 git node[:plexconnect][:install_dir] do
   repository node[:plexconnect][:git_url]
   reference node[:plexconnect][:git_ref]
   action :checkout
-  user 'plexconnect'
-  group 'plexconnect'
+  user node[:plexconnect][:user]
+  group node[:plexconnect][:group]
 end
 
 directory node[:plexconnect][:log_dir] do
-  owner 'plexconnect'
-  group 'plexconnect'
+  owner node[:plexconnect][:user]
+  group node[:plexconnect][:group]
 end
 
 pem_path = ::File.expand_path(::File.join(node[:plexconnect][:install_dir], node[:plexconnect][:settings][:certfile]))
 file pem_path do
   content node[:plexconnect][:certificate] + node[:plexconnect][:key]
-  owner 'plexconnect'
-  group 'plexconnect'
+  owner node[:plexconnect][:user]
+  group node[:plexconnect][:group]
 end
 
 file pem_path.gsub(/pem\z/, 'cer') do
   content node[:plexconnect][:certificate]
-  owner 'plexconnect'
-  group 'plexconnect'
+  owner node[:plexconnect][:user]
+  group node[:plexconnect][:group]
 end
 
 template ::File.join(node[:plexconnect][:install_dir], 'Settings.cfg') do
@@ -47,8 +47,8 @@ template ::File.join(node[:plexconnect][:install_dir], 'Settings.cfg') do
     port_ssl: node[:plexconnect][:settings][:port_ssl],
     port_webserver: node[:plexconnect][:settings][:port_webserver]
   )
-  owner 'plexconnect'
-  group 'plexconnect'
+  owner node[:plexconnect][:user]
+  group node[:plexconnect][:group]
 end
 
 template ::File.join(node[:plexconnect][:install_dir], 'ATVSettings.cfg') do
@@ -61,8 +61,8 @@ template ::File.join(node[:plexconnect][:install_dir], 'ATVSettings.cfg') do
     subtitlerenderer: node[:plexconnect][:atv_settings][:subtitlerenderer],
     transcodequality: node[:plexconnect][:atv_settings][:transcodequality]
   )
-  owner 'plexconnect'
-  group 'plexconnect'
+  owner node[:plexconnect][:user]
+  group node[:plexconnect][:group]
 end
 
 include_recipe 'plexconnect::init'
