@@ -3,6 +3,10 @@ plexconnect cookbook CHANGELOG
 
 This file is used to list changes made in each version of the plexconnect cookbook.
 
+2.1.2
+-----
+* Moves user and group to default attributes
+
 2.1.1
 -----
 * Fixes not_if condition for rc.d block in init recipe
