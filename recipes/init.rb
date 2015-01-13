@@ -6,5 +6,5 @@ end
 
 execute 'plexconnect rc.d' do
   command 'update-rc.d plexconnect defaults'
-  not_if { 'update-rc.d -n plexconnect defaults | grep "already existd"' }
+  not_if 'update-rc.d -n plexconnect defaults | grep "already exist"'
 end
