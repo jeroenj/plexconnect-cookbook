@@ -39,6 +39,7 @@ template ::File.join(node[:plexconnect][:install_dir], 'Settings.cfg') do
   source 'Settings.cfg.erb'
   variables(
     certfile: node[:plexconnect][:settings][:certfile],
+    enable_dnsserver: node[:plexconnect][:settings][:enable_dnsserver],
     hosttointercept: node[:plexconnect][:settings][:hosttointercept],
     ip_pms: node[:plexconnect][:settings][:ip_pms],
     logpath: node[:plexconnect][:settings][:logpath],

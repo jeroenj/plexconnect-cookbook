@@ -9,6 +9,7 @@ default[:plexconnect][:git_url] = 'https://github.com/iBaa/PlexConnect.git'
 default[:plexconnect][:git_ref] = 'v0.5'
 
 default[:plexconnect][:settings][:certfile] = ''
+default[:plexconnect][:settings][:enable_dnsserver] = true
 default[:plexconnect][:settings][:ip_pms] = '127.0.0.1'
 default[:plexconnect][:settings][:logpath] = default[:plexconnect][:log_dir]
 default[:plexconnect][:settings][:hosttointercept] = ''
