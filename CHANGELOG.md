@@ -3,6 +3,10 @@ plexconnect cookbook CHANGELOG
 
 This file is used to list changes made in each version of the plexconnect cookbook.
 
+2.1.4
+-----
+* Adds the iptables cookbook to the dependencies
+
 2.1.3
 -----
 * Allows DNS server to be disabled
