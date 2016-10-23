@@ -3,6 +3,11 @@ plexconnect cookbook CHANGELOG
 
 This file is used to list changes made in each version of the plexconnect cookbook.
 
+2.1.3
+-----
+* Allows DNS server to be disabled
+* Makes plexmediaserver requirement optional in init file
+
 2.1.2
 -----
 * Moves user and group to default attributes
