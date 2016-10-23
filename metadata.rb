@@ -6,6 +6,7 @@ description       'Installs PlexConnect.'
 version           '2.1.3'
 
 depends           'git'
+depends           'iptables'
 depends           'python'
 
 supports          'ubuntu'
